@@ -1,10 +1,10 @@
-ThinkPython
-===========
+# ThinkPython
 
-LaTeX source, code examples, and exercise solutions from Think Python: How to Think Like a Computer Scientist
+LaTeX source, code examples, and exercise solutions from *Python for Biomedical Informatics.*
 
-by Allen B. Downey
 
-Available from Green Tea Press at http://thinkpython.com
+by Brian E. Chapman and collaborators
 
-Published by O'Reilly Media: http://shop.oreilly.com/product/0636920025696.do
+This is a rewrite of Allen Downey's *Think Python* which is available from from Green Tea Press at http://thinkpython.com.
+
+It is also available on Github.
