@@ -1,0 +1,186 @@
+\chapter{Numeric Types in Python}
+
+\section{Number Systems}
+
+\begin{quote}
+    It is not as easy as one might think to say what the word ``number'' means: the more mathematics one learns, the more uses of this word one comes to know, and the more sophisticated one's conception of number becomes....
+
+    The modern view of numbers is that they are best regarded not individually but as parts of  larger wholes, called \emph{number systems;} the distinguishing feature of numbers systems are the arithmetical operations---such as addition, multiplication, subtraction, division, and extraction of roots---that can be performed on them. \emph{The Princeton Companion to Mathematics,} p. 17)
+\end{quote}
+
+\subsection{Natural Numbers $\mathbb{N}$}
+
+Our first number system relates to ordering and counting objects. The set of \textbf{Natural Numbers} is denoted by the symbol $\mathbb{N}$. The definition of $\mathbb{N}$ varies. Typically, $\mathbb{N}$ is synonymous with the positive integers, that is $1,2,3,\cdots$. However, $\mathbb{N}$ sometimes is used to denote the non-negative integers: $0,1,2,3,\cdots$; this convention is typically used in set theory.
+
+For natural numbers, addition and multiplication are always defined. That is, whenever we add two natural numbers, the result is \textbf{always} a natural number. Likewise, whenever we multiply two natural numbers, the result is \textbf{always} a natural number.
+
+It is readily apparent, however, that \textbf{subtraction and division are not always defined.} That is, for two natural numbers $a \text{ and } b$ $a-b$ \textbf{might not} be a natural number.
+
+\subsubsection{}
+
+For natural numbers we have the following laws (assuming $a,b,c \in \mathbb{N}$):
+
+\begin{itemize}
+    \item Commutative law of addition: $a+b=b+a$
+    \item Associative law of addition: $(a+b)+c = a + (b+c)$
+    \item Monotonic law of addition: $ \text{ if } a < b \text{ then } a+c<b+c$
+    \item Commutative law of multiplication: $ab=ba$
+    \item Associative law of multiplication: $(ab)c=a(bc)$
+    \item Monotonic law of multiplication: $ \text{ if } a < b \text{ then } ac<bc$
+\end{itemize}
+
+\subsection{Integers}
+The natural numbers do not include zero or negative numbers, both of which are indispensable, although of relatively recent origin. Writing in the 9th century C.E., \href{https://en.wikipedia.org/wiki/Mu%E1%B8%A5ammad_ibn_M%C5%ABs%C4%81_al-Khw%C4%81rizm%C4%AB}{Al-Khwarizmi} had a symbol for ``nothing'' although it wasn't yet treated as a number.
+
+The set of numbers that do include these are referred to as the \textbf{Integers}. The Integers are denoted by $\mathbb{Z}$, from the German \emph{Zahlen} meaning ``number.''
+
+For integers, the commutative and associative laws all hold, but the monotonic law of multiplication does not hold (as we now include zero and negative numbers).
+
+For integers, subtraction now always results in an integer. So from the example above, $4-6$ results in $-2$ which is an integer.
+
+
+\subsection{Rational Numbers}
+
+The set of all rational numbers is denoted by $\mathbb{Q}$ for quotients. Quotients arise from making measurements, were we inevitably experience parts of some measurement unit. Rational numbers are formed  by taking the ratio of two whole (integer) numbers.
+
+Mathematically, the system of rational numbers now allows for all operations: additions, subtractions, multiplications, and divisions (except by zero).
+
+\subsection{Real Numbers}
+
+Since the ancient Greeks, it has been know that there are numbers that cannot be expressed as the ratio of two numbers. These numbers are referred to as *irrational numbers*. A famous irrational number is $\sqrt{2}$. The [proof](./sqrt2.ipynb) that $\sqrt{2}$ is irrational, ``is one of the best-known arguments in all of mathematics.'' (\emph{Princeton Companion to Mathematics})
+
+
+We now need to expand our concept of numbers to what we call the *real* numbers. But real numbes are hard to define.
+
+\begin{quote}
+    The real numbers can be thought of as the set of all numbers with a finit or infinite decimal expansion. In the latter case, they are defined not directly but by a process of successive approximations. (Princeton)
+\end{quote}
+
+The real numbers are denoted by the symbol $\mathbb{R}$. For real numbers, addition, multiplication, subtraction, division (except by zero), and root taking (except of negative numbers) are defined since they always result in real numbers.
+
+\begin{itemize}
+    \item Real numbers include the integers, the rational numbers ($\mathbb{Q}$), and the irrational numbers.
+    \item Real numbers can be visualized as a position (distance) along a line
+\end{itemize}
+
+
+%<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Real_number_line.svg/2000px-Real_number_line.svg.png" alt="the real number line" width="500">
+
+\subsubsection{Important (or famous) Real Numbers}
+
+\begin{itemize}
+    \item $\sqrt{2}$
+    \item $e$ (sometimes called Euler's Number) is an irrational and transcendental (a number that is not the root (solution) to a polynomial equation) defined as
+\begin{equation}
+e = \lim_{n\to \infty}\left(1+\frac{1}{n}\right)^2=1+\sum_{n=1}^\infty\frac{1}{n!}\approx 2.7182818
+\end{equation}
+
+    \item $\pi$: defined as the ratio of a the ratio of the circumference of a circle to its diameter. $\pi$ is an incredibly important number, partially because it is always popping up in unexpected places. Here are a variety of ways that $\pi$ can be defined:
+\begin{eqnarray*}
+\frac{\pi^2}{6} = \sum_{n=1}^{\infty}\frac{1}{n^2},\\
+\frac{\pi}{4} = \left(1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\cdots\right),\\
+\pi=\sum_{k=0}^\infty\frac{1}{16^k}\left(\frac{4}{8k+1}-\frac{2}{8k+4}-\frac{1}{8k+5}-\frac{1}{8k+6}\right)
+\end{eqnarray*}
+
+    \item $ \phi (\text{ or } \tau )$: the golden ratio $\phi=\frac{1}{22}(1+\sqrt{5})$.
+\end{itemize}
+
+\textbf{Note how we were able to take only integers and create an irrational number} ($\pi$)
+
+\subsection{Complex Numbers}
+
+We are all familiar with the solution to the equation
+\begin{equation}
+x^2=9.
+\end{equation}
+
+We are also familiar with the solution to the equation
+
+\begin{equation}
+x^2=2.
+\end{equation}
+
+However, some of you are probably not familiar with the solution to the equation
+
+\begin{equation}
+x^2=-1.
+\end{equation}
+
+When the solution to the last equation was first ``discovered'' it was quite controversial, leading to its being named **imaginary**. But before you get worked up and dismiss these numbers, remember that negative numbers were controversial (``false'') as were irrational numbers (e.g. $\sqrt{2}$) when they were discovered. The solution is obtained by defining $i=\sqrt{-1}$.
+
+A \textbf{complex number} $z$ is then defined as
+
+\begin{equation}
+z = x+iy
+\end{equation}
+where $x$ and $y$ are real numbers.
+
+The set of all complex numbers is denoted by $\mathbb{CC}$.
+
+Geometrically, real numbers are the continuous location along a line. Similarly, \textbf{complex numbers} are the continuous location in a plane with the real component describing the $x$-axis and the imaginary component describing the $y$-axis.
+
+%![The complex plane](http://upload.wikimedia.org/wikipedia/commons/7/7d/Gaussian_integer_lattice.png)
+
+\subsubsection{Rules of Complex Arithmetic}
+
+\subsubsection{Conjugate}
+
+Given a complex number $z$, the conjugate of $z$ ($z^*$) is defined as
+\begin{equation}
+z^*=x-iy
+\end{equation}
+
+\subsubsection{Norm}
+
+Multiplying a complex number by its conjugate results in the magnitude squared of the number.
+{\bf Addition:}
+\begin{equation}
+z_1+z_2 = (x_1+x_2)+i(y_1+y_2)
+\end{equation}
+
+\subsubsection{Multiplication}
+\begin{eqnarray}
+z_1*z_2 = x_1x_2+ix_1y_2+iy_1x_2+i^2y_1y_2\\ \nonumber
+= (x_1x_2-y_1y_2)+i(x_1y_2+x_2y_1)
+\end{eqnarray}
+
+\subsubsection{Division}
+\begin{equation}
+\frac{z_1}{z_2} = \frac{z_1z^*_2}{z_2z^*_2}=\frac{z_1z^*_2}{||z_2||^2}
+\end{equation}
+
+\textbf{The Importance of Data Representation}
+Multiplication and division of complex numbers can be simplified by using polar notation. Given $z=x+iy$
+\begin{equation}
+z=re^{i\theta}
+\end{equation}
+where $r=\sqrt{x^2+y^2}$ and $\theta=tan^{-1}(\frac{y}{x})$.
+Then
+\begin{equation}
+z_1z_2 = r_1r_2e^{i\theta_1+\theta_2}.
+\end{equation}
+
+Despite their name, complex numbers actually simplify life a lot. Complex numbers are complete: any polynomial has complex roots (with real numbers as a subset of complex numbers). Through Euler's equations, trigonometry can be greatly simplified by relating $sin$ and $cos$ to complex functions of $e$.
+
+Complex numbers are convenient for representing any physical quantity that has both a magnitude and a phase (e.g. electrical current in a circuit, pressure waves in the circulation, MR signal).
+
+\section{Basic Numeric Types in Python}
+
+Python has three basic types of numbers:
+\begin{itemize}
+    \item Integers
+    \item Floating Point Numbers
+    \item Complex Numbers
+\end{itemize}
+
+Why these different types? Aren't numbers just numbers? Numbers arose from two different applications: counting and measuring. (See K. Devlin, \emph{Introduction to Mathematical Thinking} for a brief discussion.)
+
+\begin{enumerate}
+    \item \textbf{Counting} led to integers (with negative numbers and zero added along the way)
+    \item \textbf{Measuring} led to real numbers
+\end{enumerate}
+
+\subsection{Integers: $\mathbb{Z}$, $0,\pm 1, \pm 2, \cdots$}
+
+Python 3.x simplifies the representation of integers (see \href{https://docs.python.org/3/whatsnew/3.0.html#integers}{What's New In Python 3.0}). In Python 2.x integers (limited precision) and long integers (unlimited precision). In 2.x maximum integer value is stored in \textbf{sys.maxsize}
+This has a value of 9223372036854775807 on my MacBook Pro.

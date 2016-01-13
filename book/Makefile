@@ -19,7 +19,7 @@ PDFFLAGS = -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress \
 all:	book.tex
 	makeindex book.tex
 	pdflatex book.tex
-	mv book.pdf thinkpython.pdf
+	mv book.pdf python4bmi.pdf
 
 hevea:	book.tex header.html footer.html
 	# replace the pdfs with eps
@@ -83,6 +83,3 @@ oreilly:
 
 clean:
 	rm -f *~ *.aux *.log *.dvi *.idx *.ilg *.ind *.toc
-
-
-
